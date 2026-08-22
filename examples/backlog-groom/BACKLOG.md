@@ -23,10 +23,11 @@ Rules of thumb applied to every item:
 ## Done
 
 - [x] **repo-portfolio-audit** · shipped 2026-08-20. Written before this repository existed and published here as-is; no queue item.
-- [x] **backlog-groom** · shipped 2026-08-22, item 002. 001 — portfolio-sweep removed from the Queue below: running this skill against this file found it a 100% keyword-overlap duplicate of the already-shipped repo-portfolio-audit, which existed before this BACKLOG.md did and was never checked against it. Worked example in `examples/backlog-groom`.
 
 ## Queue
 
+- [ ] **001 — portfolio-sweep** · Audit every repository in one pass and report only what changed since the last run: broken suites, missing CI, secrets, .gitignore gaps, README tables that no longer match the directories on disk, conventions a repository claims but no longer holds. State file so a weekly run reports new findings rather than re-listing old ones.
+- [ ] **002 — backlog-groom** · Read a BACKLOG against the code that now exists. Tick what shipped, delete what the design outgrew, re-rank what the last three items changed, and flag every entry that has sat unchanged long enough to be a decision nobody made.
 - [ ] **003 — pr-review** · Review a pull request against the repository's own stated standard rather than a generic checklist — the rules in its BACKLOG, the conventions in its sibling projects, the voice of its existing README.
 - [ ] **004 — daily-loop-runbook** · The runbook the scheduled loop follows, versioned here rather than in the loop repository, so the instruction and the agents that carry it out stay together.
 - [ ] **005 — repo-scaffold** · Create a repository that matches the house conventions from the first commit: README with a 'what this is not' section, BACKLOG with the standing rules block, LICENSE, .gitignore, and the layout its kind of work uses.
