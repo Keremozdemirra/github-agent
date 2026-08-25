@@ -29,7 +29,7 @@ Rules of thumb applied to every item:
 
 - [ ] **001 — backlog-groom** · Read a BACKLOG against the code that now exists. Tick what shipped, delete what the design outgrew, re-rank what the last three items changed, and flag every entry that has sat unchanged long enough to be a decision nobody made.
 - [ ] **002 — pr-review** · Review a pull request against the repository's own stated standard rather than a generic checklist — the rules in its BACKLOG, the conventions in its sibling projects, the voice of its existing README.
-- [ ] **003 — daily-loop-runbook** · The runbook the scheduled loop follows, versioned here rather than in the loop repository, so the instruction and the agents that carry it out stay together.
+- [x] **003 — daily-loop-runbook** · Dropped 2026 08 25. The runbook the scheduled loop follows, versioned here rather than in the loop repository. There is no longer a loop to follow it: Kerem retired `daily-loop` and asked for nothing daily anywhere, so the item has no subject rather than no time.
 - [ ] **004 — repo-scaffold** · Create a repository that matches the house conventions from the first commit: README with a 'what this is not' section, BACKLOG with the standing rules block, LICENSE, .gitignore, and the layout its kind of work uses.
 - [ ] **005 — stale-pr-triage** · Find open pull requests that have gone quiet, work out whether each is waiting on a decision, a conflict or nothing, and say which to close.
 - [ ] **006 — release-notes** · Write the release note from what the commits actually changed, not from their subject lines, and say plainly what a user has to do differently.
