@@ -79,6 +79,7 @@ See [BACKLOG.md](BACKLOG.md). The first unchecked item is the one being built.
 | Skill | What it does |
 | --- | --- |
 | [repo-portfolio-audit](skills/repo-portfolio-audit) | Audit every repository in one pass and report only what changed since the last run. |
+| [backlog-groom](skills/backlog-groom) | Check a BACKLOG.md against what actually shipped: duplicates, missing files, stale items. |
 
 | Agent | What it does |
 | --- | --- |

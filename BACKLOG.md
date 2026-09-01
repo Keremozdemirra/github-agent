@@ -24,10 +24,10 @@ Rules of thumb applied to every item:
 
 - [x] **repo-portfolio-audit** · shipped 2026-08-20. Written before this repository existed and published here as-is; no queue item.
 - [x] **portfolio-sweep** · closed 2026-08-22. Already shipped as repo-portfolio-audit.
+- [x] **001 — backlog-groom** · built 2026-08-22, merged 2026-09-01. Reads a BACKLOG against the code that now exists: Queue items that already shipped under another name, Done items whose file is gone, and items nobody has touched in weeks. Every finding is a candidate rather than a verdict. Worked example in `examples/backlog-groom`.
 
 ## Queue
 
-- [ ] **001 — backlog-groom** · Read a BACKLOG against the code that now exists. Tick what shipped, delete what the design outgrew, re-rank what the last three items changed, and flag every entry that has sat unchanged long enough to be a decision nobody made.
 - [ ] **002 — pr-review** · Review a pull request against the repository's own stated standard rather than a generic checklist — the rules in its BACKLOG, the conventions in its sibling projects, the voice of its existing README.
 - [x] **003 — daily-loop-runbook** · Dropped 2026 08 25. The runbook the scheduled loop follows, versioned here rather than in the loop repository. There is no longer a loop to follow it: Kerem retired `daily-loop` and asked for nothing daily anywhere, so the item has no subject rather than no time.
 - [ ] **004 — repo-scaffold** · Create a repository that matches the house conventions from the first commit: README with a 'what this is not' section, BACKLOG with the standing rules block, LICENSE, .gitignore, and the layout its kind of work uses.

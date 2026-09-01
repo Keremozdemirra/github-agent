@@ -1,0 +1,8 @@
+[
+  {
+    "kind": "DUPLICATE",
+    "item": "portfolio-sweep",
+    "line": 29,
+    "message": "overlaps 100% with already-shipped 'repo-portfolio-audit' \u2014 read both before building this"
+  }
+]
