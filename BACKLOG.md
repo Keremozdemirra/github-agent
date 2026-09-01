@@ -23,15 +23,16 @@ Rules of thumb applied to every item:
 ## Done
 
 - [x] **repo-portfolio-audit** · shipped 2026-08-20. Written before this repository existed and published here as-is; no queue item.
-- [x] **backlog-groom** · shipped 2026-08-22, item 002. 001 — portfolio-sweep removed from the Queue below: running this skill against this file found it a 100% keyword-overlap duplicate of the already-shipped repo-portfolio-audit, which existed before this BACKLOG.md did and was never checked against it. Worked example in `examples/backlog-groom`.
+- [x] **portfolio-sweep** · closed 2026-08-22. Already shipped as repo-portfolio-audit.
+- [x] **001 — backlog-groom** · built 2026-08-22, merged 2026-09-01. Reads a BACKLOG against the code that now exists: Queue items that already shipped under another name, Done items whose file is gone, and items nobody has touched in weeks. Every finding is a candidate rather than a verdict. Worked example in `examples/backlog-groom`.
 
 ## Queue
 
-- [ ] **003 — pr-review** · Review a pull request against the repository's own stated standard rather than a generic checklist — the rules in its BACKLOG, the conventions in its sibling projects, the voice of its existing README.
-- [ ] **004 — daily-loop-runbook** · The runbook the scheduled loop follows, versioned here rather than in the loop repository, so the instruction and the agents that carry it out stay together.
-- [ ] **005 — repo-scaffold** · Create a repository that matches the house conventions from the first commit: README with a 'what this is not' section, BACKLOG with the standing rules block, LICENSE, .gitignore, and the layout its kind of work uses.
-- [ ] **006 — stale-pr-triage** · Find open pull requests that have gone quiet, work out whether each is waiting on a decision, a conflict or nothing, and say which to close.
-- [ ] **007 — release-notes** · Write the release note from what the commits actually changed, not from their subject lines, and say plainly what a user has to do differently.
-- [ ] **008 — ci-bootstrap** · Add the smallest CI that would actually have caught the last three things that broke, rather than the standard matrix nobody reads.
-- [ ] **009 — secret-sweep** · Scan history as well as the working tree, and say what to do about a secret that is already in a published commit — rotation first, rewriting second.
-- [ ] **010 — convention-drift** · Check whether a repository still holds the conventions its own README claims, and report the gap as a diff rather than a complaint.
+- [ ] **002 — pr-review** · Review a pull request against the repository's own stated standard rather than a generic checklist — the rules in its BACKLOG, the conventions in its sibling projects, the voice of its existing README.
+- [x] **003 — daily-loop-runbook** · Dropped 2026 08 25. The runbook the scheduled loop follows, versioned here rather than in the loop repository. There is no longer a loop to follow it: Kerem retired `daily-loop` and asked for nothing daily anywhere, so the item has no subject rather than no time.
+- [ ] **004 — repo-scaffold** · Create a repository that matches the house conventions from the first commit: README with a 'what this is not' section, BACKLOG with the standing rules block, LICENSE, .gitignore, and the layout its kind of work uses.
+- [ ] **005 — stale-pr-triage** · Find open pull requests that have gone quiet, work out whether each is waiting on a decision, a conflict or nothing, and say which to close.
+- [ ] **006 — release-notes** · Write the release note from what the commits actually changed, not from their subject lines, and say plainly what a user has to do differently.
+- [ ] **007 — ci-bootstrap** · Add the smallest CI that would actually have caught the last three things that broke, rather than the standard matrix nobody reads.
+- [ ] **008 — secret-sweep** · Scan history as well as the working tree, and say what to do about a secret that is already in a published commit — rotation first, rewriting second.
+- [ ] **009 — convention-drift** · Check whether a repository still holds the conventions its own README claims, and report the gap as a diff rather than a complaint.

@@ -8,9 +8,8 @@ quiet, which backlog has drifted from what the code actually does, which pull
 request has been open long enough to have become a merge conflict, which README
 describes a project that no longer exists.
 
-This repository holds the agents and skills for that job. It is the pack behind
-the daily loop that advances the rest of the portfolio, and the first place a
-change to how that loop behaves should land.
+This repository holds the agents and skills for that job, and the first place a
+change to how the portfolio is maintained should land.
 
 It exists because the work is genuinely repeatable. The same audit, the same
 grooming pass, the same release note, the same "this repository claims a
@@ -40,8 +39,8 @@ bash ~/Desktop/agent/_setup/sync-skills.sh
 ```
 
 That clones every agent repository and links its `skills/` into `~/.claude/skills`,
-so they are available in every session and every folder. Re-run it whenever the
-daily loop ships something new — it pulls rather than re-clones.
+so they are available in every session and every folder. Re-run it whenever one of
+these repositories ships something new — it pulls rather than re-clones.
 
 Then simply ask. Each skill's `description` frontmatter is written to match how
 the request actually gets phrased, in English or Turkish, so you do not name the
@@ -69,6 +68,8 @@ examples/
   <name>/             worked example on real input, with the output committed
 ```
 
+`examples/` is empty so far.
+
 ## Roadmap
 
 See [BACKLOG.md](BACKLOG.md). The first unchecked item is the one being built.
@@ -88,7 +89,7 @@ See [BACKLOG.md](BACKLOG.md). The first unchecked item is the one being built.
 These arrived already written and in daily use, rather than being built against the queue below — which is why most carry no item number. Some have Turkish bodies: they were written in the language they are used in, and translating them is a queue item rather than a blocker.
 
 Everything still under Queue in [BACKLOG.md](BACKLOG.md) does not exist
-yet. The daily loop builds one item a day.
+yet.
 ## Licence
 
 MIT. See [LICENSE](LICENSE).

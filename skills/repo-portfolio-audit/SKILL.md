@@ -1,6 +1,6 @@
 ---
 name: repo-portfolio-audit
-description: Sweeps every repository in a portfolio in one pass and reports only what changed since last time — clones or pulls each repo, runs every project's test suite, checks whether CI exists and whether it would actually catch a failure, runs the secret and dangerous-pattern scan, checks .gitignore covers .env, verifies the conventions each repo claims to hold (LICENSE, BACKLOG, CLAUDE.md, README project table matching the directories on disk), and counts the LLM-writing tells in README prose. Keeps a state file so a weekly run reports new findings rather than re-listing the same ones. Use this skill whenever the user wants to check, audit, review or tidy up all their repos at once, asks "repolarımı tara", "hepsini kontrol et", "repo sağlığı", "check all my repos", "audit my github", "what needs fixing across my projects"; when setting up a recurring repo health routine; and after a stretch of work across several repositories, to catch what drifted.
+description: Sweeps every repository in a portfolio in one pass and reports only what changed since last time — pulls each repo, runs its tests, checks whether CI would actually catch a failure, runs the secret and dangerous-pattern scan, checks .gitignore covers .env, verifies the conventions each repo claims to hold, and counts LLM-writing tells in README prose. Keeps a state file so a weekly run reports new findings rather than the same ones. Use to check, audit or tidy all repos at once, to set up a recurring health routine, or after a stretch of work across several repositories: "repolarimi tara", "repo sagligi", "audit my github", "what needs fixing across my projects". Not for auditing one app's security in depth; use pre-launch-security-audit.
 ---
 
 # Repo portfolio audit
@@ -31,8 +31,13 @@ this out at the end wastes the pass.
 ### 2. Run the sweep
 
 ```bash
-python3 "$SKILL_DIR/scripts/sweep.py" --repos repos.txt --workdir ./_audit
+# $SKILL_DIR is not set in every runtime; locate the script directly.
+SWEEP="$(find "$HOME/.claude/skills" "$HOME/agents" -name sweep.py -path '*repo-portfolio-audit*' -print -quit 2>/dev/null)"
+python3 "$SWEEP" --repos repos.txt --workdir ./_audit
 ```
+
+If `$SWEEP` comes back empty the skill lives somewhere these roots do not cover —
+ask the user where it is installed rather than guessing a path.
 
 Useful flags: `--only-new` compares against the state file and reports only
 findings not seen last time; `--json` for machine-readable output; `--no-fetch`
