@@ -8,9 +8,8 @@ quiet, which backlog has drifted from what the code actually does, which pull
 request has been open long enough to have become a merge conflict, which README
 describes a project that no longer exists.
 
-This repository holds the agents and skills for that job. It is the pack behind
-the daily loop that advances the rest of the portfolio, and the first place a
-change to how that loop behaves should land.
+This repository holds the agents and skills for that job, and the first place a
+change to how the portfolio is maintained should land.
 
 It exists because the work is genuinely repeatable. The same audit, the same
 grooming pass, the same release note, the same "this repository claims a
